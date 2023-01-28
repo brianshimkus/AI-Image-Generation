@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import FormField from '../components/FormField'
+import { preview } from '../assets'
 
 export default function CreatePost() {
 	const navigate = useNavigate()
@@ -56,22 +57,11 @@ export default function CreatePost() {
 								className='w-full h-full object-contain'
 							/>
 						) : (
-							<>
-								<svg
-									className='w-8 h-8 text-gray-400'
-									xmlns='http://www.w3.org/2000/svg'
-									fill='none'
-									viewBox='0 0 24 24'
-									stroke='currentColor'
-									aria-hidden='true'>
-									<path
-										strokeLinecap='round'
-										strokeLinejoin='round'
-										strokeWidth={2}
-										d='M12 6v6m0 0v6m0-6h6m-6 0H6'
-									/>
-								</svg>
-							</>
+							<img
+								src={preview}
+								alt='preview'
+								className='w-9/12 h-9/12 object-contain opacity-40'
+							/>
 						)}
 					</div>
 				</div>
