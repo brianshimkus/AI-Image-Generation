@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import FormField from '../components/FormField'
 import { preview } from '../assets'
+import { getRandomPrompt } from '../utils'
 
 export default function CreatePost() {
 	const navigate = useNavigate()
@@ -17,9 +18,14 @@ export default function CreatePost() {
 
 	const handleSubmit = () => {}
 
-	const handleChange = () => {}
+	const handleChange = (e) => {
+		setForm({ ...form, [e.target.name]: e.target.value })
+	}
 
-	const handleSurpriseMe = () => {}
+	const handleSurpriseMe = () => {
+		const randomPrompt = getRandomPrompt(form.prompt)
+		setForm({ ...form, prompt: randomPrompt })
+	}
 
 	return (
 		<section className='max-w-7xl mx-auto'>
