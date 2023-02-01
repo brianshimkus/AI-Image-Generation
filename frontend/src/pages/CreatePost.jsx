@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import FormField from '../components/FormField'
 import { preview } from '../assets'
 import { getRandomPrompt } from '../utils'
+import Loader from '../components/Loader'
 
 export default function CreatePost() {
 	const navigate = useNavigate()
@@ -18,7 +19,7 @@ export default function CreatePost() {
 		if (form.prompt) {
 			try {
 				setGeneratingImg(true)
-				const response = await fetch('https://localhost:8080/api/v1/image', {
+				const response = await fetch('http://localhost:8080/api/v1/image', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
