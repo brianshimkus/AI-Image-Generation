@@ -18,6 +18,8 @@ export default function Home() {
 	const [loading, setLoading] = useState(false)
 	const [allPosts, setAllPosts] = useState(null)
 	const [searchText, setSearchText] = useState('')
+	const [searchedResults, setSearchedResults] = useState(null)
+	const [searchTimeout, setSearchTimeout] = useState(null)
 
 	const fetchPosts = async () => {
 		setLoading(true)
@@ -67,8 +69,9 @@ export default function Home() {
 				<h1 className='font-extrabold text-[#222328] text-[32px]'>
 					The Community Showcase
 				</h1>
-				<p className='mt-2 text-[#666e75] text-[16px] max-w-[500px]'>
-					Browse through a collection of images
+				<p className='mt-2 text-[#666e75] text-[14px] max-w-[500px]'>
+					Browse through a collection of imaginative and visually stunning
+					images
 				</p>
 			</div>
 
@@ -83,7 +86,7 @@ export default function Home() {
 				/>
 			</div>
 
-			<div className='mt-16'>
+			<div className='mt-10'>
 				{loading ? (
 					<div className='flex justify-center items-center'>
 						<Loader />
@@ -92,15 +95,18 @@ export default function Home() {
 					<>
 						{searchText && (
 							<h2 className='font-medium text-[#666e75] text-xl mb-3'>
-								Showing results for{' '}
-								<span className='text-[#222328]'>{searchText}</span>
+								Showing Resuls for{' '}
+								<span className='text-[#222328]'>{searchText}</span>:
 							</h2>
 						)}
-						<div className='grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3'>
+						<div className='grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3'>
 							{searchText ? (
-								<RenderCards data={searchedResults} title='No results found' />
+								<RenderCards
+									data={searchedResults}
+									title='No Search Results Found'
+								/>
 							) : (
-								<RenderCards data={allPosts} title='No posts found' />
+								<RenderCards data={allPosts} title='No Posts Yet' />
 							)}
 						</div>
 					</>
