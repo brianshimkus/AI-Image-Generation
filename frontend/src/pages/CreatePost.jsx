@@ -4,6 +4,8 @@ import FormField from '../components/FormField'
 import { preview } from '../assets'
 import { getRandomPrompt } from '../utils'
 import Loader from '../components/Loader'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export default function CreatePost() {
 	const navigate = useNavigate()
@@ -41,6 +43,8 @@ export default function CreatePost() {
 		}
 	}
 
+	const notify = () => 'Image successfully shared!'
+
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 
@@ -54,7 +58,6 @@ export default function CreatePost() {
 					},
 					body: JSON.stringify({ ...form }),
 				})
-
 				await response.json()
 				navigate('/')
 			} catch (err) {
@@ -150,6 +153,7 @@ export default function CreatePost() {
 					</button>
 				</div>
 			</form>
+			<ToastContainer />
 		</section>
 	)
 }
