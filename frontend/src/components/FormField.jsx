@@ -13,13 +13,13 @@ export default function FormField({
 			<div className='flex items-center gap-2 mb-2'>
 				<label
 					htmlFor={name}
-					className='block text-sm font-medium text-gray-900'>
+					className='block text-sm font-medium text-gray-300'>
 					{labelName}
 				</label>
 				{isSurpriseMe && (
 					<button
 						type='button'
-						className='font-semibold text-xs bg-[#ECECF!] py-1 px-2 rounded-[5px] text-black'
+						className='font-semibold text-xs bg-[#ECECF!] py-1 px-2 rounded-[5px] text-gray-300'
 						onClick={handleSurpriseMe}>
 						Surprise me
 					</button>
@@ -33,7 +33,7 @@ export default function FormField({
 				value={value}
 				onChange={handleChange}
 				required
-				className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#6469ff] focus:border-[#649ff] outline-none block w-full p-3'
+				className='bg-gray-700 border border-gray-900 text-gray-900 text-sm rounded-lg focus:ring-[#6469ff] focus:border-gray-300 outline-none block w-full p-3'
 			/>
 		</div>
 	)

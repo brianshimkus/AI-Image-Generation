@@ -67,10 +67,10 @@ export default function Home() {
 	return (
 		<section className='max-w-7xl mx-auto'>
 			<div>
-				<h1 className='font-extrabold text-[#222328] text-[32px]'>
+				<h1 className='font-bold text-green-400 text-[32px]'>
 					The Community Showcase
 				</h1>
-				<p className='mt-2 text-[#666e75] text-[14px] max-w-[500px]'>
+				<p className='mt-2 text-gray-200 text-xl max-w-[500px]'>
 					Browse through a collection of imaginative and visually stunning
 					images
 				</p>
@@ -95,7 +95,7 @@ export default function Home() {
 				) : (
 					<>
 						{searchText && (
-							<h2 className='font-medium text-[#666e75] text-xl mb-3'>
+							<h2 className='font-medium text-gray-200 text-xl mb-3'>
 								Showing Resuls for{' '}
 								<span className='text-[#222328]'>{searchText}</span>:
 							</h2>
