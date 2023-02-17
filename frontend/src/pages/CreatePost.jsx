@@ -82,13 +82,15 @@ export default function CreatePost() {
 	return (
 		<section className='max-w-7xl mx-auto'>
 			<div>
-				<h1 className='font-extrabold text-[#222328] text-[32px]'>Create</h1>
-				<p className='mt-2 text-[#666e75] text-[16px] max-w-[500px]'>
+				<h1 className='font-bold text-green-400 text-3xl tracking-wider'>
+					Create
+				</h1>
+				<p className='mt-2 text-gray-400 text-xl max-w-[500px]'>
 					Create images through AI
 				</p>
 			</div>
 
-			<form className='mt-16 max-w-3xl' onSubmit={handleSubmit}>
+			<form className='mt-12 max-w-3xl' onSubmit={handleSubmit}>
 				<div className='flex flex-col gap-5'>
 					<FormField
 						labelName='Your name'
@@ -136,7 +138,7 @@ export default function CreatePost() {
 					<button
 						type='button'
 						onClick={generateImage}
-						className=' text-white bg-green-700 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center'>
+						className='font-inter font-medium bg-green-500 text-green-900 uppercase px-4 py-2 rounded-md transition ease-in-out duration-300 hover:bg-green-300 tracking-wider'>
 						{generatingImg ? 'Generating...' : 'Generate'}
 					</button>
 				</div>
@@ -148,7 +150,7 @@ export default function CreatePost() {
 					</p>
 					<button
 						type='submit'
-						className='mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center'>
+						className='mt-3 text-slate-800 bg-slate-500 font-inter font-medium rounded-md w-full sm:w-auto px-5 py-2.5 text-center uppercase tracking-wider transition ease-in-out duration-300 hover:bg-slate-400'>
 						{loading ? 'Sharing...' : 'Share with the Community'}
 					</button>
 				</div>
