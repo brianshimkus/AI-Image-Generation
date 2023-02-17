@@ -12,7 +12,7 @@ export default function App() {
 
 				<Link
 					to='/create-post'
-					className='font-inter font-medium bg-green-500 text-green-900 uppercase px-4 py-2 rounded-md transition ease-in-out duration-300 hover:bg-green-300'>
+					className='font-inter font-medium bg-green-500 text-green-900 uppercase px-4 py-2 rounded-md transition ease-in-out duration-300 hover:bg-green-300 tracking-wider'>
 					Create
 				</Link>
 			</header>

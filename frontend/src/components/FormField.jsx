@@ -33,7 +33,7 @@ export default function FormField({
 				value={value}
 				onChange={handleChange}
 				required
-				className='bg-gray-700 border border-gray-900 text-gray-900 text-sm rounded-lg focus:ring-[#6469ff] focus:border-gray-300 outline-none block w-full p-3'
+				className='bg-gray-700 border border-slate-600 text-slate-400 text-sm rounded-lg focus:ring-[#6469ff] focus:border-gray-300 outline-none block w-full p-3'
 			/>
 		</div>
 	)
