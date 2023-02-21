@@ -1,13 +1,14 @@
 import { Home, CreatePost } from './pages'
 import { BrowserRouter, Route, Link, Routes } from 'react-router-dom'
-import { logo } from './assets'
 
 export default function App() {
 	return (
 		<BrowserRouter>
-			<header className='w-full flex justify-between items-center bg-gray-800 sm:px-8 px-4 py-4 border-b border-b-gray-900'>
+			<header className='w-full flex justify-between items-center bg-gray-800 sm:px-8 px-4 py-4 border-b border-b-slate-900'>
 				<Link to='/'>
-					<img src={logo} alt='logo' className='w-28' />
+					<h1 className='font-bold text-green-400 text-3xl tracking-wider'>
+						AI Image Generator
+					</h1>
 				</Link>
 
 				<Link
