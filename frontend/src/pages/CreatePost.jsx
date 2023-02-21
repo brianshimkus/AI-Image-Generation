@@ -82,7 +82,7 @@ export default function CreatePost() {
 	return (
 		<section className='max-w-7xl mx-auto'>
 			<div>
-				<h1 className='font-bold text-green-400 text-3xl tracking-wider'>
+				<h1 className='font-bold text-gray-200 text-3xl tracking-wider'>
 					Create
 				</h1>
 				<p className='mt-2 text-gray-400 text-xl max-w-[500px]'>
